@@ -9,9 +9,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Главная</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Мой профиль</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Меню
@@ -21,10 +18,11 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Поиск</button>
-      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item g-4">
+          <a class="btn btn-success btn-sm" href="#">Мой профиль</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
