@@ -13,12 +13,6 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Меню
           </a>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Войти</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">Регистрация</a>
-          </li>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Добавить видео</a></li>
           </ul>
@@ -26,7 +20,8 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item g-4">
-          <a class="btn btn-success btn-sm" href="#">Мой профиль</a>
+          <a class="btn btn-success btn-sm" href="{{ route('register') }}">Регистрация</a>
+          <a class="btn btn-primary btn-sm" href="{{ route('login') }}">Вход</a>
         </li>
       </ul>
     </div>
