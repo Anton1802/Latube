@@ -19,9 +19,19 @@
         </li>
       </ul>
       <ul class="navbar-nav">
+        @if(Auth::check())
+        <li class="nav-item me-2">
+          Привет {{ Auth::user()->username }}!
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('logout') }}" class="btn btn-primary btn-sm">Выйти</a>
+        </li>
+        @endif
         <li class="nav-item g-4">
+          @if(!Auth::check())
           <a class="btn btn-success btn-sm" href="{{ route('register') }}">Регистрация</a>
           <a class="btn btn-primary btn-sm" href="{{ route('login') }}">Вход</a>
+          @endif
         </li>
       </ul>
     </div>

@@ -1,5 +1,9 @@
 @extends('index')
 
+@section('title')
+Регистрация
+@endsection
+
 @section('content')
 <div class="container">
   <form action="{{ route('register_process') }}" method="post">

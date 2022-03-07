@@ -22,3 +22,5 @@ Route::post('/login_process', [LoginController::class, 'login'])->name('login_pr
 
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
 Route::post('/register_process', [RegisterController::class, 'register'])->name('register_process');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

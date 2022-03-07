@@ -1,9 +1,22 @@
 @extends('index')
 
+@section('title')
+Вход
+@endsection
+
 @section('content')
 <div class="container">
   <form action="{{ route('login_process') }}" method="post">
     @csrf
+    @if($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
     <div class="form-group">
       <label>Имя пользователя:</label>
       <input type="text" name="username" class="form-control">
