@@ -20,15 +20,19 @@ class RegisterController extends Controller
       if($request->isMethod('post'))
       {
 
+        $validate = $request->validate([
+            'email' => ['required', 'email'],
+            'username' => ['required', 'max:10', 'min:4'],
+            'password' => ['required']
+        ]);
+
         $user = User::create([
             'email' => $request->input('email'),
             'username' => $request->input('username'),
             'password' => bcrypt($request->input('password'))
         ]);
 
-        return redirect()
-            ->route('main')
-            ->with('success', "Регистрация выполнена успешно");
+        return redirect()->route('main');
 
       }
 

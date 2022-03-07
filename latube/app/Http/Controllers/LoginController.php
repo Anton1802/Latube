@@ -21,12 +21,12 @@ class LoginController extends Controller
       if($request->isMethod('post'))
       {
 
-        $credentials = $request->validate([
+        $validate = $request->validate([
             'username' => ['required'],
             'password' => ['required']
         ]);
 
-        if (Auth::attempt($credentials))
+        if (Auth::attempt($validate))
         {
 
             $request->session()->regenerate();
