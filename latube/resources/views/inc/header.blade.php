@@ -14,7 +14,7 @@
             Меню
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Добавить видео</a></li>
+            <li><a class="dropdown-item" href="{{ route('add') }}">Добавить видео</a></li>
           </ul>
         </li>
       </ul>
@@ -23,7 +23,7 @@
         <li class="nav-item me-2">
           Привет {{ Auth::user()->username }}!
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-end">
           <a href="{{ route('logout') }}" class="btn btn-primary btn-sm">Выйти</a>
         </li>
         @endif
