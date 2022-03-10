@@ -17,11 +17,5 @@ class MainController extends Controller
 
     }
 
-    public function show($id)
-    {
-
-
-
-    }
 
 }

@@ -1,5 +1,9 @@
 @extends('index')
 
+@section('title')
+Главная страница
+@endsection
+
 @section('content')
 <div class="container">
   <div class="row row-cols-4">

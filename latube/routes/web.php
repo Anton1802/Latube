@@ -5,6 +5,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\VideoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/add', [DownloadController::class, 'add'])->name('add')->middleware('auth');
 Route::post('/add_process', [DownloadController::class, 'add'])->name('add_process')->middleware('auth');
+
+Route::get('/video/{id}', [VideoController::class, 'show']);
