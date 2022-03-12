@@ -6,19 +6,23 @@
 
 @section('content')
 <div class="container">
-  <div class="row row-cols-4">
+  <div class="row row-cols-4 d-flex justify-content-center">
     @foreach($videos as $video)
-<div class="video mt-2 mb-2 col">
+<div class="video mt-5 col-auto ">
 <div class="card" style="width: 18rem;">
   <img src="{{ $video->img_path }}" class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{ $video->title }}</h5>
-    <p class="card-text">{{ $video->description }}</p>
-    <a class="btn btn-primary btn-sm" href="video/{{ $video->id }}">Смотреть</a>
+    <div class="overflow-auto" style="height:70px;">
+      <p class="card-text">{{ $video->description }}</p>
+    </div>
+    <p>{{ $video->views }} просмотр(ов)</p>
+    <a class="btn btn-primary btn-sm mt-2" href="video/{{ $video->id }}">Смотреть</a>
   </div>
 </div>
 </div>
   @endforeach
+</div>
 </div>
 </div>
 @endsection

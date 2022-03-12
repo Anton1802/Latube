@@ -6,6 +6,7 @@
 
 @section('content')
 <div class="container">
+  <h1>Регистрация</h1>
   <form action="{{ route('register_process') }}" method="post">
     @csrf
     @if($errors->any())

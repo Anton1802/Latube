@@ -6,6 +6,7 @@
 
 @section('content')
 <div class="container">
+  <h1>Вход</h1>
   <form action="{{ route('login_process') }}" method="post">
     @csrf
     @if($errors->any())
