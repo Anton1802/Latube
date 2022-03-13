@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('title')
-Главная страница
+Latube 
 @endsection
 
 @section('content')

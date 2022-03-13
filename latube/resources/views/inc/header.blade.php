@@ -15,6 +15,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ route('add') }}">Добавить видео</a></li>
+            <li><a class="dropdown-item" href="{{ route('user') }}">Мой профиль</a></li>
           </ul>
         </li>
       </ul>
