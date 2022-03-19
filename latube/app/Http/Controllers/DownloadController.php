@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Video;
+use Illuminate\Support\Facades\Auth;
 
 class DownloadController extends Controller
 {
     public function add(Request $request)
     {
+
 
         if($request->isMethod('get'))
         {
@@ -39,7 +41,8 @@ class DownloadController extends Controller
                 'title' => $title,
                 'description' => $description,
                 'img_path' => 'img/' . $imgFile->getClientOriginalName(),
-                'video_path' => 'video/' . $video->getClientOriginalName()
+                'video_path' => 'video/' . $video->getClientOriginalName(),
+                'author_id' => Auth::user()->id
             ]);
 
             return redirect()->back()->with('success', 'Видео успешно добавлено!');

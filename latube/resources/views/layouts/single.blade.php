@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('title')
-
+{{ $video->title }}
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
 <video id="player" playsinline controls>
     <source src="/video/{{ $video->id }}/stream" type="video/mp4" />
 </video>
-<div class="border border-dark mt-2 ps-2 pe-2 pt-2 rounded">
+<div class="border border-dark mt-2 ps-2 pe-2 pt-2 pb-2 rounded">
     <div class="description">
     <b>Описание:</b>
     <p>{{ $video->description }}</p>
@@ -19,10 +19,7 @@
     <b>Количество просмотров:</b><p>{{$video->views}} просмотр(ов)</p>
     </div>
     <div class="author">
-    <b>Автор:</b> Anton
-    </div>
-    <div class="like text-end pb-2">
-    <a class="btn btn-danger">Нравится</a>
+    <b>Автор:</b> {{ $video->author['username'] }}
     </div>
 </div>
 </div>
