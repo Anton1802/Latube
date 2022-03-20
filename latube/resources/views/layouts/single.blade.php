@@ -20,7 +20,7 @@
 <div class="border border-dark mt-2 ps-2 pe-2 pt-2 pb-2 rounded">
     <div class="description">
     <b>Описание:</b>
-    <p class="overflow-auto" style="height: 100px;">{{ $video->description }}</p>
+    <p class="overflow-auto" style="max-height: 100px;">{{ $video->description }}</p>
     </div>
     <div class="count-views">
     <b>Количество просмотров:</b><p>{{$video->views}} просмотр(ов)</p>
