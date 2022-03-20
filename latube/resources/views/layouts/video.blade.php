@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('title')
-Latube 
+Latube
 @endsection
 
 @section('content')
@@ -13,9 +13,7 @@ Latube
   <img src="{{ $video->img_path }}" class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{ $video->title }}</h5>
-    <div class="overflow-auto" style="height:70px;">
-      <p class="card-text">{{ $video->description }}</p>
-    </div>
+  
     <p>{{ $video->views }} просмотр(ов)</p>
     <a class="btn btn-primary btn-sm mt-2" href="video/{{ $video->id }}">Смотреть</a>
   </div>

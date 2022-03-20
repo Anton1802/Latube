@@ -25,7 +25,7 @@
           Привет {{ Auth::user()->username }}!
         </li>
         <li class="nav-item text-end">
-          <a href="{{ route('logout') }}" class="btn btn-primary btn-sm">Выйти</a>
+          <a href="{{ route('logout') }}" class="btn btn-primary btn-sm me-2">Выйти</a>
         </li>
         @endif
         <li class="nav-item g-4">
