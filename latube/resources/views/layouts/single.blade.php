@@ -8,7 +8,7 @@
 <div class="container mt-5">
 <h1>{{ $video->title }}</h1>
 <video id="player" playsinline controls>
-    <source src="/video/{{ $video->id }}/stream" type="video/mp4" />
+    <source src="/video/{{ $video->id }}/stream" />
 </video>
 <p class="mt-3">
 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
